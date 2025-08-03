@@ -33,25 +33,24 @@ const Hero = () => {
             </div>
           </div>
 
-       {/* Buttons — larger and mobile-friendly */}
-{/* Buttons — larger and mobile-friendly */}
+{/* Buttons — fixed size for consistent display on all devices */}
 <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
   <a
     href="/resume.pdf"
     download="Dasrat_Resume.pdf"
-    className="px-6 py-3 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition"
+    className="w-40 h-12 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition inline-flex items-center justify-center"
   >
     Download Resume
   </a>
 
   <a
-  href="mailto:dasratkumardeewan@gmail.com"
-  className="px-6 py-3 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition"
->
-  Contact Me
-</a>
-
+    href="mailto:dasratkumardeewan@gmail.com"
+    className="w-40 h-12 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition inline-flex items-center justify-center"
+  >
+    Contact Me
+  </a>
 </div>
+
 
 
 
