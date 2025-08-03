@@ -34,6 +34,7 @@ const Hero = () => {
           </div>
 
        {/* Buttons — larger and mobile-friendly */}
+{/* Buttons — larger and mobile-friendly */}
 <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
   <a
     href="/resume.pdf"
@@ -44,14 +45,14 @@ const Hero = () => {
   </a>
 
   <a
-    href="https://github.com/DasratTheCoder"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-6 py-3 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition"
-  >
-    Github
-  </a>
+  href="mailto:dasratkumardeewan@gmail.com"
+  className="px-6 py-3 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition"
+>
+  Contact Me
+</a>
+
 </div>
+
 
 
         </div>
