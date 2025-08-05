@@ -21,7 +21,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    setErrors((prev) => ({ ...prev, [e.target.name]: '' })); // clear error on change
+    setErrors((prev) => ({ ...prev, [e.target.name]: '' }));
   };
 
   const handleSubmit = (e) => {
@@ -38,15 +38,9 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-black text-white flex items-center justify-center px-6"
-      style={{ minHeight: '100vh' }}
-    >
+    <section id="contact" className="bg-black text-white flex items-center justify-center px-6 py-20">
       <div className="max-w-3xl w-full">
-        <h2 className="text-4xl font-bold text-green-500 mb-10 text-center">
-          Contact Me
-        </h2>
+        <h2 className="text-4xl font-bold text-green-500 mb-10 text-center">Contact Me</h2>
 
         {submitted && (
           <div className="mb-6 text-center text-green-400 font-semibold">
@@ -67,9 +61,7 @@ const Contact = () => {
                 errors.name ? 'border-red-500' : 'border-gray-700'
               } focus:outline-none focus:border-green-500 transition`}
             />
-            {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-            )}
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </label>
 
           <label className="flex flex-col">
@@ -84,9 +76,7 @@ const Contact = () => {
                 errors.email ? 'border-red-500' : 'border-gray-700'
               } focus:outline-none focus:border-green-500 transition`}
             />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </label>
 
           <label className="flex flex-col">
@@ -101,9 +91,7 @@ const Contact = () => {
                 errors.message ? 'border-red-500' : 'border-gray-700'
               } focus:outline-none focus:border-green-500 transition`}
             />
-            {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-            )}
+            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
           </label>
 
           <button

@@ -1,42 +1,79 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import imageme from '../assets/images/personal.jpg'
 
-const ProjectCard = () => {
+const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md border border-green-500 rounded-3xl p-6 max-w-md w-full shadow-[0_0_30px_-5px_#22c55e50] hover:shadow-[0_0_40px_0px_#22c55eaa] transition duration-300 group">
-      <div className="absolute top-0 left-0 w-full h-full bg-green-500 opacity-10 rounded-3xl z-0"></div>
-
-      <div className="relative z-10">
-        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:scale-105 transition-transform duration-300">
-          🎮 Tic Tac Toe
-        </h3>
-        <p className="text-gray-300 mb-4 text-sm sm:text-base leading-relaxed">
-          A classic, minimal Tic Tac Toe game built with HTML, CSS, and JS.
-          Responsive, clean, and fun to play!
-        </p>
-        <a
-          href="https://tic-tac-toe-game.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-full font-semibold transition duration-300"
+    <section id="projects" className="bg-black text-white py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2
+          className="text-5xl font-extrabold text-green-500 text-center mb-16"
+          data-aos="fade-down"
         >
-          🔗 View Live
-        </a>
+          Project
+        </h2>
+
+        <div
+          className="flex flex-col md:flex-row gap-10 items-center bg-white/5 p-6 rounded-xl border border-gray-700 shadow-lg hover:shadow-green-500/40 transition duration-300"
+          data-aos="fade-up"
+        >
+          {/* Project Image */}
+          <div className="w-full md:w-1/2">
+            <img
+              src={imageme}
+              alt="Portfolio Project"
+              className="rounded-xl border border-gray-800 hover:scale-105 transition duration-300"
+            />
+          </div>
+
+          {/* Project Content */}
+          <div className="w-full md:w-1/2 flex flex-col gap-5">
+            <h3 className="text-3xl font-bold text-white">My Portfolio Website</h3>
+            <p className="text-gray-300 leading-relaxed">
+              A sleek and responsive portfolio website built with React, Tailwind CSS, and animations using AOS & Framer Motion. It showcases my skills, projects, and includes smooth scroll navigation.
+            </p>
+
+            {/* Tech Stack Tags */}
+            <div className="flex flex-wrap gap-3 text-sm">
+              {['React', 'Tailwind CSS', 'Framer Motion', 'AOS'].map((tech, i) => (
+                <span
+                  key={i}
+                  className="bg-green-500 text-black font-semibold px-3 py-1 rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex gap-4 mt-4">
+              <a
+                href="https://portfolio-five-red-96.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 text-black font-bold px-5 py-2 rounded hover:bg-green-400 transition"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/your-username/your-portfolio-repo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-green-500 text-green-500 font-bold px-5 py-2 rounded hover:bg-green-500 hover:text-black transition"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-const ProjectsSection = () => {
-  return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        {/* Add more <ProjectCard /> components as needed */}
-      </div>
-    </div>
-  );
-};
-
-export default ProjectsSection;
+export default Projects;

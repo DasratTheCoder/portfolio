@@ -1,26 +1,20 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNode,
-  FaGitAlt,
-} from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiFigma } from 'react-icons/si';
+
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiNextdotjs, SiExpress, SiMongodb, SiRedux } from 'react-icons/si';
 
 const skills = [
-  { name: 'HTML', icon: <FaHtml5 className="text-orange-500 text-4xl" />, level: 5 },
-  { name: 'CSS', icon: <FaCss3Alt className="text-blue-500 text-4xl" />, level: 4 },
-  { name: 'JavaScript', icon: <FaJs className="text-yellow-400 text-4xl" />, level: 4 },
-  { name: 'React', icon: <FaReact className="text-cyan-400 text-4xl" />, level: 4 },
-  { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400 text-4xl" />, level: 4 },
-  { name: 'Node.js', icon: <FaNode className="text-green-600 text-4xl" />, level: 3 },
-  { name: 'MongoDB', icon: <SiMongodb className="text-green-500 text-4xl" />, level: 3 },
-  { name: 'Git', icon: <FaGitAlt className="text-red-500 text-4xl" />, level: 4 },
-  { name: 'Figma', icon: <SiFigma className="text-pink-500 text-4xl" />, level: 3 },
+  { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
+  { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
+  { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+  { name: 'React', icon: <FaReact className="text-cyan-400" /> },
+  { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
+  { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+  { name: 'Express.js', icon: <SiExpress className="text-white" /> },
+  { name: 'MongoDB', icon: <SiMongodb className="text-green-600" /> },
+  { name: 'Redux', icon: <SiRedux className="text-purple-500" /> },
 ];
 
 const Skills = () => {
@@ -29,44 +23,34 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="bg-black py-16 px-6 text-white" id="skills">
-      <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
-        <h2 className="text-4xl font-bold text-green-500 mb-12">My Skills</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+    <section id="skills" className="bg-black text-white py-20">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2
+          className="text-5xl font-extrabold text-green-500 mb-16"
+          data-aos="fade-down"
+        >
+          Skills
+        </h2>
+
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+          data-aos="fade-up"
+        >
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-[#111] p-6 rounded-xl shadow-lg hover:shadow-green-500/30 transition duration-300 border border-gray-800 hover:border-green-500"
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-gray-700 shadow-lg hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-105 group cursor-pointer"
               data-aos="zoom-in"
+              data-aos-delay={index * 100}
             >
-              <div className="flex justify-center mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-              <div className="flex justify-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`text-xl ${
-                      i < skill.level ? 'text-yellow-400' : 'text-gray-600'
-                    }`}
-                  >
-                    ★
-                  </span>
-                ))}
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-all duration-300">
+                {skill.icon}
               </div>
+              <h3 className="text-2xl font-bold text-white group-hover:text-green-400 transition">
+                {skill.name}
+              </h3>
             </div>
           ))}
-        </div>
-
-        {/* Resume Button */}
-        <div className="mt-12" data-aos="fade-up">
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-block relative group overflow-hidden px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:text-black transition-all duration-300"
-          >
-            <span className="absolute left-0 top-0 h-full w-full bg-white transform -translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out z-0"></span>
-            <span className="relative z-10">Download Resume</span>
-          </a>
         </div>
       </div>
     </section>
