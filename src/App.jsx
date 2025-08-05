@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
 import Contact from './components/Contact';
+
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
 
 function App() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <Skills />
-      <Projects />
+      <Suspense fallback={<div className="text-white text-center">Loading...</div>}>
+        <Skills />
+        <Projects />
+      </Suspense>
       <Contact />
     </div>
   );

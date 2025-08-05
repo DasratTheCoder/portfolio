@@ -20,7 +20,12 @@ const Hero = () => {
 
           <div className="flex justify-center mb-10" data-aos="zoom-in" data-aos-delay="300">
             <div className="h-64 w-64 rounded-full overflow-hidden shadow-lg border-4 border-green-500">
-              <img src={personal} alt="Profile" className="object-cover h-full w-full" />
+              <img
+                src={personal}
+                alt="Profile"
+                loading="lazy"
+                className="object-cover h-full w-full"
+              />
             </div>
           </div>
 

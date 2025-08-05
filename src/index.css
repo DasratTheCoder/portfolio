@@ -2,15 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-@import "aos/dist/aos.css";
-
-body {
-  background-color: black;
+@layer components {
+  .btn-primary {
+    @apply w-40 h-12 text-base font-semibold text-white bg-green-700 rounded-full border border-green-600 hover:bg-green-600 transition inline-flex items-center justify-center;
+  }
 }
