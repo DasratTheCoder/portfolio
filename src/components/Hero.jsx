@@ -36,7 +36,7 @@ const Hero = () => {
           <span className="relative invisible">Download Resume</span>
         </a>
 
-        <a href="mailto:dasratkumardeewan@gmail.com?subject=Freelance%20Project%20Inquiry" className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-green-500 rounded-full shadow-md group hover:bg-green-500 hover:text-white hover:shadow-lg bg-white">
+        <a href="mailto:dasratkumardeewan@gmail.com" className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-green-500 rounded-full shadow-md group hover:bg-green-500 hover:text-white hover:shadow-lg bg-white">
           <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 translate-x-full bg-green-500 group-hover:translate-x-0 ease">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5l-4-4-4 4" />

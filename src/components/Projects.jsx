@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import imageme from '../assets/images/personal.jpg';
 
 const Projects = () => {
   useEffect(() => {
@@ -10,15 +9,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'My Portfolio Website',
-      image: imageme,
-      description:
-        'A sleek and responsive portfolio website built with React, Tailwind CSS, and animations using AOS & Framer Motion.',
-      tech: ['React', 'Tailwind CSS', 'Framer Motion', 'AOS'],
-      demo: 'https://portfolio-five-red-96.vercel.app/',
-      github: 'https://github.com/your-username/your-portfolio-repo',
-    },
-    {
       title: 'To-Do List App',
       image: 'https://cdn-icons-png.flaticon.com/512/2387/2387635.png',
       description:
@@ -26,6 +16,15 @@ const Projects = () => {
       tech: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
       demo: 'https://todo-list-erc6ivcoq-dasrats-projects.vercel.app/',
       github: 'https://github.com/DasratTheCoder/todo-list',
+    },
+    {
+      title: 'Web Calculator',
+      image: 'https://cdn-icons-png.flaticon.com/512/10434/10434504.png',
+      description:
+        'A responsive web calculator built using HTML, CSS, and JavaScript. Supports basic arithmetic operations with a clean, mobile-friendly UI.',
+      tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+      demo: 'https://dasratthecoder.github.io/Web-Calculator/',
+      github: 'https://github.com/DasratTheCoder/Web-Calculator',
     },
   ];
 
