@@ -7,7 +7,8 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
 import axios from 'axios'
-import WhatsappButton from "./components/WhatsappButton"; // ✅ Import WhatsApp Button
+import WhatsappButton from "./components/WhatsappButton"; // ✅ Import WhatsApp Button;
+import About from "./components/About";
 
 
 
@@ -21,7 +22,7 @@ function App() {
 
       {/* Hero section */}
       <Hero />
-
+<About/>
       {/* Skills */}
       <Skills />
 

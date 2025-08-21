@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+    const phoneNumber = "923142344057"; // replace with your WhatsApp number (no + sign, include country code)
+  const message = "Hello! I’d like to know more."; // optional prefilled text
   return (
     <footer className="bg-black text-gray-300 pt-12 pb-6 mt-12">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
@@ -58,7 +60,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/dasratdeewan"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 transition"
@@ -66,7 +68,7 @@ const Footer = () => {
               <FaTwitter />
             </a>
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/dasrat._.kumar/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 transition"
@@ -74,7 +76,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/923001234567"
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 transition"
