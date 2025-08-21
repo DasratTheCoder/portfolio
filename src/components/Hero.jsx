@@ -10,7 +10,6 @@ const Hero = () => {
       id="home"
       className="min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden text-center px-4"
     >
-      {/* Name */}
       <motion.h1
         className="text-5xl md:text-7xl font-bold mb-4 text-green-500"
         initial={{ opacity: 0, y: -50 }}
@@ -20,7 +19,6 @@ const Hero = () => {
         Dasrat Kumar
       </motion.h1>
 
-      {/* Typed Subtitle */}
       <motion.h2
         className="text-xl md:text-2xl text-gray-300 mb-6"
         initial={{ opacity: 0, y: -20 }}
@@ -42,7 +40,6 @@ const Hero = () => {
         </span>
       </motion.h2>
 
-      {/* Profile Image */}
       <motion.img
         src={personal}
         alt="Profile"
@@ -53,14 +50,12 @@ const Hero = () => {
         transition={{ duration: 1.2 }}
       />
 
-      {/* CTA Buttons */}
       <motion.div
         className="flex flex-wrap justify-center items-center gap-4 mt-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
       >
-        {/* Resume Button */}
         <a
           href="/resume.pdf"
           download="Dasrat_Resume.pdf"
@@ -89,7 +84,6 @@ const Hero = () => {
           <span className="relative invisible">Download Resume</span>
         </a>
 
-        {/* Hire Me Button */}
         <a
           href="mailto:dasratkumardeewan@gmail.com"
           className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-green-500 rounded-full shadow-md group hover:bg-green-500 hover:text-white hover:shadow-lg bg-white"

@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   // Added 'testimonials' to the sections array
-  const sections = ['home', 'skills','about', 'projects', 'testimonials', 'contact'];
+  const sections = ['home','services', 'skills','about', 'projects', 'testimonials', 'contact'];
 
   return (
     <nav className="bg-black text-white border-b border-gray-800 fixed top-0 w-full z-50">
