@@ -12,16 +12,15 @@ const Navbar = () => {
     }
   };
 
-  // Added "experience"
+  // Corrected sequence
   const sections = [
     'home',
+    'about',
     'services',
     'skills',
-    'about',
     'experience',
-     'blog',
-     
     'projects',
+    'blog',
     'testimonials',
     'contact',
   ];
