@@ -12,20 +12,26 @@ const Navbar = () => {
     }
   };
 
-  // Added 'testimonials' to the sections array
-  const sections = ['home','services', 'skills','about', 'projects', 'testimonials', 'contact'];
+  const sections = ['home', 'services', 'skills', 'about', 'projects', 'testimonials', 'contact'];
 
   return (
     <nav className="bg-black text-white border-b border-gray-800 fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <div className="text-green-500 font-bold text-3xl cursor-pointer">Dasrat Dev</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        {/* Logo */}
+        <div
+          onClick={() => scrollToSection('home')}
+          className="text-green-500 font-bold text-2xl cursor-pointer"
+        >
+          Dasrat Dev
+        </div>
 
-        <ul className="hidden md:flex space-x-8 text-lg font-semibold">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6 text-base font-medium">
           {sections.map((section) => (
             <li key={section}>
               <button
                 onClick={() => scrollToSection(section)}
-                className="hover:text-green-500 transition"
+                className="hover:text-green-500 transition-colors"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </button>
@@ -33,6 +39,7 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-green-500 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -42,19 +49,19 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Fullscreen Menu */}
       {isOpen && (
-        <ul className="absolute top-20 left-0 right-0 w-full bg-black flex flex-col items-center space-y-6 py-6 md:hidden border-t border-gray-800">
+        <div className="fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center space-y-8 md:hidden transition-all duration-300">
           {sections.map((section) => (
-            <li key={section}>
-              <button
-                onClick={() => scrollToSection(section)}
-                className="text-lg font-semibold hover:text-green-500 transition"
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-            </li>
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className="text-2xl font-semibold text-white hover:text-green-500 transition"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
           ))}
-        </ul>
+        </div>
       )}
     </nav>
   );
