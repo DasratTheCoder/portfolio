@@ -26,12 +26,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-black text-white border-b border-gray-800 fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <nav className="bg-black text-white border-b border-gray-800 fixed top-0 w-full z-50 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <div
           onClick={() => scrollToSection('home')}
-          className="text-green-500 font-bold text-2xl cursor-pointer"
+          className="text-green-500 font-bold text-xl sm:text-2xl cursor-pointer"
         >
           Dasrat Dev
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+          {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
         </button>
       </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className="text-2xl font-semibold text-white hover:text-green-500 transition"
+              className="text-xl sm:text-2xl font-semibold text-white hover:text-green-500 transition"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </button>
