@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 import axios from 'axios'
 import WhatsappButton from "./components/WhatsappButton"; // ✅ Import WhatsApp Button;
 import About from "./components/About";
-import Services from "./components/services";
+import Services from "./components/Services";
 import Experience from "./components/Experience";
 import Blog from "./components/Blog";
 
