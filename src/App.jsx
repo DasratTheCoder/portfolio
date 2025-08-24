@@ -10,36 +10,25 @@ import axios from 'axios'
 import WhatsappButton from "./components/WhatsappButton"; // ✅ Import WhatsApp Button;
 import About from "./components/About";
 import Services from "./components/services ";
+import Experience from "./components/Experience";
+import Blog from "./components/Blog";
 
 
 function App() {
 
   return (
     <div className="bg-black text-white relative">
-    
-      {/* Top navigation bar */}
       <Navbar />
-
-      {/* Hero section */}
       <Hero />
-<About/>
-      {/* Skills */}
-      <Skills />
       <Services/>
-
-      {/* Projects */}
+      <Skills />
+      <About/>
+      <Experience/>
+      <Blog/>
       <Projects />
-
-      {/* Testimonials */}
       <Testimonials />
-
-      {/* Contact */}
       <Contact />
-
-      {/* Footer */}
       <Footer />
-
-      {/* ✅ WhatsApp button */}
       <WhatsappButton />
     </div>
   );

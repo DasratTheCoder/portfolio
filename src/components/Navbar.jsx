@@ -12,7 +12,19 @@ const Navbar = () => {
     }
   };
 
-  const sections = ['home', 'services', 'skills', 'about', 'projects', 'testimonials', 'contact'];
+  // Added "experience"
+  const sections = [
+    'home',
+    'services',
+    'skills',
+    'about',
+    'experience',
+     'blog',
+     
+    'projects',
+    'testimonials',
+    'contact',
+  ];
 
   return (
     <nav className="bg-black text-white border-b border-gray-800 fixed top-0 w-full z-50">
